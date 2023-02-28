@@ -2,8 +2,8 @@
 
 Objective
 
-Statistical Analysis for PERSON (PLACE, yyyy)
-<!-- Technical Report for PERSON (PLACE, yyyy) -->
+Statistical Analysis for Tom Kobe (Slovenia, 2023)
+<!-- Technical Report for Tom Kobe (Slovenia, 2023) -->
 
 ## Analyses performed
 
