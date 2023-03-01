@@ -134,6 +134,9 @@ observations.
 
 ## Analytical dataset
 
+CAL will be calculated as the sum of REC and DP.
+All outcomes will be calculated as the difference between the end-of-study measurements and baseline measurements.
+
 <!-- After the cleaning process -->
 <!-- `r Nvar_final` -->
 <!-- variables were included in the analysis -->
