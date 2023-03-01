@@ -58,15 +58,19 @@ source("scripts/input.R", encoding = 'UTF-8')
 
 # Abbreviations
 
-- BMI: body mass index
+<!-- - BMI: body mass index -->
+- CAL:
 - CI: confidence interval
-- CV: coefficient of variation
+<!-- - CV: coefficient of variation -->
 - d: Cohen's D effect size
-- HR: hazards ratio
-- IQR: interquartile range
-- IRR: incidence rate ratio
-- OR: odds ratio
-- RR: risks ratio
+<!-- - HR: hazards ratio -->
+<!-- - IQR: interquartile range -->
+<!-- - IRR: incidence rate ratio -->
+<!-- - OR: odds ratio -->
+<!-- - RR: risks ratio -->
+- PD: probing depth
+- REC: gingival recession
+- TP: tip of the papillae
 - SD: standard deviation
 
 # Context
