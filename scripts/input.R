@@ -45,9 +45,14 @@ data.raw <- data.raw %>%
   mutate(
     id = as.character(id), # or as.factor
     gender = factor(gender, labels = c("Female", "Male")),
+    tooth = factor(tooth),
     exposure = factor(exposure, labels = c("Gel 40", "Gen-Os")),
     # set gold standard as the reference level
-    exposure = relevel(exposure, "Gen-Os"),
+    # exposure = relevel(exposure, "Gen-Os"),
+    outcome = cal2 - cal0,
+    rec = rec2 - rec0,
+    pd = pd2 - pd0,
+    tp = tp2 - tp0,
   )
 
 # labels ------------------------------------------------------------------
@@ -56,6 +61,9 @@ data.raw <- data.raw %>%
   set_variable_labels(
     exposure = "Biomaterial",
     outcome = "CAL change",
+    rec = "REC change",
+    pd = "PD change",
+    tp = "TP change",
     cal0 = "CAL (baseline)",
     cal2 = "CAL (end-of-study)",
     rec0 = "REC (baseline)",
@@ -66,6 +74,7 @@ data.raw <- data.raw %>%
     tp2 = "TP (end-of-study)",
     age = "Age (years)",
     gender = "Gender",
+    tooth = "Tooth",
   )
 
 # analytical dataset ------------------------------------------------------
@@ -75,10 +84,9 @@ analytical <- data.raw %>%
   select(
     id,
     exposure,
-    outcome,
-    # everything(),
     gender,
     age,
+    tooth,
     pd0,
     pd2,
     tp0,
@@ -87,6 +95,11 @@ analytical <- data.raw %>%
     rec2,
     cal0,
     cal2,
+    outcome,
+    pd,
+    tp,
+    rec,
+    # everything(),
   )
 
 Nvar_final <- analytical %>% ncol
