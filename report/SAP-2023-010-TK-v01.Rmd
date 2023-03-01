@@ -79,6 +79,12 @@ source("scripts/input.R", encoding = 'UTF-8')
 
 ## Hypotheses
 
+- The REC change from baseline is different in both biomaterials;
+- The CAL change from baseline is different in both biomaterials;
+- The PD change from baseline is different in both biomaterials;
+- The CAL change from baseline is different in both biomaterials;
+- The TP change from baseline is different in both biomaterials.
+
 # Data
 
 ## Raw data
