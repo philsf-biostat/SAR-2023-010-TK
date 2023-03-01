@@ -1,4 +1,4 @@
-# [title]
+# Efficacy of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial
 
 Objective
 
