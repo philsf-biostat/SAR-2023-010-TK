@@ -157,7 +157,7 @@ All variables in the analytical set were labeled according to the raw data provi
 
 ## Study design
 
-Randomized controled clinical trial.
+Randomized controlled clinical trial.
 
 ## Inclusion and exclusion criteria
 
