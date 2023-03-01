@@ -28,7 +28,17 @@ theme_gtsummary_compact()
 
 tab_desc <- analytical %>%
   tbl_summary(
-    include = -id,
+    include = -c(id, pd, tp, rec, outcome),
+    type = list(
+      pd0 ~ "continuous",
+      pd2 ~ "continuous",
+      tp0 ~ "continuous",
+      tp2 ~ "continuous",
+      rec0 ~ "continuous",
+      rec2 ~ "continuous",
+      cal0 ~ "continuous",
+      cal2 ~ "continuous"
+    ),
     # by = exposure,
   ) %>%
   # modify_caption(caption = "**Tabela 1** Características demográficas") %>%

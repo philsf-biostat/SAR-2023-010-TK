@@ -11,9 +11,9 @@ library(labelled)
 
 # data loading ------------------------------------------------------------
 set.seed(42)
-data.raw <- tibble(id=gl(2, 10), exposure = gl(2, 10), outcome = rnorm(20))
-# data.raw <- read_excel("dataset/file.xlsx") %>%
-#   janitor::clean_names()
+# data.raw <- tibble(id=gl(2, 10), exposure = gl(2, 10), outcome = rnorm(20))
+data.raw <- read_excel("dataset/NIPSA_EEP_data_TK.xlsx") %>%
+  janitor::clean_names()
 
 Nvar_orig <- data.raw %>% ncol
 Nobs_orig <- data.raw %>% nrow
@@ -22,6 +22,14 @@ Nobs_orig <- data.raw %>% nrow
 
 data.raw <- data.raw %>%
   rename(
+    id = patient,
+    outcome = cag2,
+    exposure = biomaterial_0_gel_40_1_gen_os,
+    gender = gender_0_f_1_m,
+    # cal = cal2,
+    # tp = tp2,
+    # rec = rec2,
+    # pd = pd2,
   ) %>%
   select(
     everything(),
@@ -35,15 +43,38 @@ data.raw <- data.raw %>%
 
 data.raw <- data.raw %>%
   mutate(
-    id = factor(id), # or as.character
+    id = as.character(id), # or as.factor
+    gender = factor(gender, labels = c("Female", "Male")),
+    tooth = factor(tooth),
+    exposure = factor(exposure, labels = c("Gel 40", "Gen-Os")),
+    # set gold standard as the reference level
+    # exposure = relevel(exposure, "Gen-Os"),
+    outcome = cal2 - cal0,
+    rec = rec2 - rec0,
+    pd = pd2 - pd0,
+    tp = tp2 - tp0,
   )
 
 # labels ------------------------------------------------------------------
 
 data.raw <- data.raw %>%
   set_variable_labels(
-    exposure = "Study exposure",
-    outcome = "Study outcome",
+    exposure = "Biomaterial",
+    outcome = "CAL change",
+    rec = "REC change",
+    pd = "PD change",
+    tp = "TP change",
+    cal0 = "CAL (baseline)",
+    cal2 = "CAL (end-of-study)",
+    rec0 = "REC (baseline)",
+    rec2 = "REC (end-of-study)",
+    pd0 = "PD (baseline)",
+    pd2 = "PD (end-of-study)",
+    tp0 = "TP (baseline)",
+    tp2 = "TP (end-of-study)",
+    age = "Age (years)",
+    gender = "Gender",
+    tooth = "Tooth",
   )
 
 # analytical dataset ------------------------------------------------------
@@ -53,8 +84,22 @@ analytical <- data.raw %>%
   select(
     id,
     exposure,
+    gender,
+    age,
+    tooth,
+    pd0,
+    pd2,
+    tp0,
+    tp2,
+    rec0,
+    rec2,
+    cal0,
+    cal2,
     outcome,
-    everything(),
+    pd,
+    tp,
+    rec,
+    # everything(),
   )
 
 Nvar_final <- analytical %>% ncol

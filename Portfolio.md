@@ -1,41 +1,19 @@
 ---
-title: '[title]'
-date: ""
+title: 'Efficacy of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial'
+date: "2023-03-10"
 permalink: /portfolio/SAR-2023-010/
 redirect_from:
   - /portfolio/SAR-2023-010-TK/
   - /SAR-2023-010-TK/
   - /SAR-2023-010/
 categories:
-  - case-control
-  - cross-sectional
-  - longitudinal-studies
-  - cohort
   - clinical-trial
-  - ecological
   - epidemiology
-  - bioassay
-  - systematic-review
-  - technical-report
-  - data-product
 tags:
-  - prevalence
-  - incidence
-  - diagnostic-models
-  - prognostic-models
-  - imputation-models
-  - survival-analysis
   - efficacy
-  - concordance-analysis
-  - survey
-  - meta-analysis
-  - decision-trees
-  - machine-learning
-  - unsupervised-learning
-  - data-instrument
 ---
 
-Objective
+To evaluate the efficacy of using pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects.
 
 Statistical Analysis for Tom Kobe (Slovenia, 2023)
 <!-- Technical Report for Tom Kobe (Slovenia, 2023) -->

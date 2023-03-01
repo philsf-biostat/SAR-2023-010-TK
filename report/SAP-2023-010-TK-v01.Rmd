@@ -1,8 +1,8 @@
 ---
-title: "Analytical Plan for [title]"
+title: "Analytical Plan for Efficacy of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial"
 subtitle: 'DOCUMENT: SAP-2023-010-TK-v01'
 author: '**From:** Felipe Figueiredo **To:** Tom Kobe'
-date: "`r Sys.Date()`"
+date: "2023-03-01"
 output:
   html_document:
     fig_caption: yes
@@ -37,7 +37,7 @@ panderOptions('table.split.table', 160)
 
 \newpage
 
-**Analytical Plan for [title]**
+**Analytical Plan for Efficacy of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial**
 
 **Document version**
 
@@ -58,22 +58,33 @@ source("scripts/input.R", encoding = 'UTF-8')
 
 # Abbreviations
 
-- BMI: body mass index
+<!-- - BMI: body mass index -->
+- CAL: clinical attachment level
 - CI: confidence interval
-- CV: coefficient of variation
+<!-- - CV: coefficient of variation -->
 - d: Cohen's D effect size
-- HR: hazards ratio
-- IQR: interquartile range
-- IRR: incidence rate ratio
-- OR: odds ratio
-- RR: risks ratio
+<!-- - HR: hazards ratio -->
+<!-- - IQR: interquartile range -->
+<!-- - IRR: incidence rate ratio -->
+<!-- - OR: odds ratio -->
+<!-- - RR: risks ratio -->
+- PD: probing depth
+- REC: gingival recession
+- TP: tip of the papillae
 - SD: standard deviation
 
 # Context
 
 ## Objectives
 
+To evaluate the efficacy of using pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects.
+
 ## Hypotheses
+
+- The CAL change from baseline is different in both biomaterials;
+- The PD change from baseline is different in both biomaterials;
+- The REC change from baseline is different in both biomaterials;
+- The TP change from baseline is different in both biomaterials.
 
 # Data
 
@@ -124,15 +135,18 @@ observations.
 
 ## Analytical dataset
 
-<!-- After the cleaning process -->
-<!-- `r Nvar_final` -->
-<!-- variables were included in the analysis -->
-<!-- with -->
-<!-- `r Nobs_final` -->
-<!-- observations. -->
+CAL will be calculated as the sum of REC and DP.
+All outcomes will be calculated as the difference between the end-of-study measurements and baseline measurements.
+
 After the cleaning process
 `r Nvar_final`
-variables were included in the analysis.
+variables were included in the analysis
+with
+`r Nobs_final`
+observations.
+<!-- After the cleaning process -->
+<!-- `r Nvar_final` -->
+<!-- variables were included in the analysis. -->
 The total number of observations excluded due to incompleteness and exclusion criteria will be reported in the analysis.
 Table 1 shows the structure of the analytical dataset.
 
@@ -147,22 +161,38 @@ All variables in the analytical set were labeled according to the raw data provi
 
 ## Study design
 
+Randomized controlled clinical trial.
+
 ## Inclusion and exclusion criteria
 
+N/A
+
 ## Exposures
+
+Efficacy of usage of pre-hydrated collagenated xenogenic bone mix (Gel40) will be tested against the gold standard bone graft (Gen-Os).
 
 ## Outcomes
 
 **Specification of outcome measures** (Zarin, 2011):
 
-1. (Domain)
-2. (Specific measurement)
-3. (Specific metric)
-4. (Method of aggregation)
+1. (Domain) Periodontal intrabony defects
+2. (Specific measurement) CAL
+3. (Specific metric) Change from baseline
+4. (Method of aggregation) Mean
 
 **Primary outcome**
 
+CAL change.
+
+**Secondary outcomes**
+
+- REC change;
+- PD change;
+- TP change.
+
 ## Covariates
+
+No adjustment for covariates will be performed in this analysis.
 
 # Statistical methods
 
@@ -172,7 +202,7 @@ All variables in the analytical set were labeled according to the raw data provi
 
 The epidemiological profile of the study participants will be described.
 Demographic
-(sex, age and BMI)
+<!-- (sex, age and BMI) -->
 and clinical variables
 <!-- ( [vars] ) -->
 will be described as
@@ -184,19 +214,23 @@ The distributions of participants' characteristics will be summarized in tables 
 ### Inferential analyses
 
 All comparisons between groups will be performed as univariate analyses.
-Continuous variables will be compared between groups with the
+Outcomes will be compared between exposure groups with the
 independent t test with Welch correction.
 <!-- paired t test. -->
 <!-- Mann-Whitney test. -->
 <!-- signed rank Wilcoxon test. -->
-Differences in distribution of categorical variables will be assessed with the
-Fisher exact test.
+<!-- Differences in distribution of categorical variables will be assessed with the -->
+<!-- Fisher exact test. -->
 <!-- chi-square test. -->
 <!-- McNemar test. -->
+
+The Cohen's d standardized mean difference will be reported for all outcomes as the effect size for the efficacy of the main exposure relative to the gold standard.
 
 <!-- All inferential analyses will be performed in the statistical models (described in the next section). -->
 
 ### Statistical modeling
+
+N/A
 
 ### Missing data
 
@@ -221,13 +255,11 @@ n <- analytical %>%
 n1 <- n[1]
 n2 <- n[2]
 total <- sum(n)
-d <- pwr::pwr.t2n.test(n1 = n1, n2 = n2, power = .8, sig.level = .05)$d %>%
-  format.float()
 d <- pwr::pwr.t.test(n = total/2, power = .8, sig.level = .05)$d %>%
   format.float()
 ```
 
-<!-- Study groups were balanced and the total sample size was `r total` including all groups. -->
+Study groups were balanced and the total sample size was `r total` including all groups.
 
 <!-- Study groups were not balanced with -->
 <!-- group1 with `r n1` participants -->
@@ -236,11 +268,9 @@ d <- pwr::pwr.t.test(n = total/2, power = .8, sig.level = .05)$d %>%
 <!-- with a total study size of `r total`. -->
 <!-- This power analysis adjusts for different group sizes. -->
 
-<!-- With these group sizes a t test can detect an effect size as large as -->
-<!-- **d = `r d`** -->
-<!-- with 80% power and 5% significance level (Cohen, 1988). -->
-
-N/A
+With these group sizes a t test can detect an effect size as large as
+**d = `r d`**
+with 80% power and 5% significance level (Cohen, 1988).
 
 ## Statistical packages
 
@@ -248,27 +278,23 @@ This analysis will be performed using statistical software `R` version `r getRve
 
 # Observations and limitations
 
+**Small sample size**
+
+The total sample size of this study is only 20 participants.
+Cohen considered an effect size of d = 0.8 to be large, which means that this sample size is only able to detect very large clinical effects.
+
 **Recommended reporting guideline**
 
 The adoption of the EQUATOR network (<http://www.equator-network.org/>) reporting guidelines have seen increasing adoption by scientific journals.
-All observational studies are recommended to be reported following the STROBE guideline (von Elm et al, 2014).
-<!-- All clinical trials are recommended to be reported following the CONSORT guideline (Schulz K F, Altman D G, Moher D., 2010). -->
-<!-- All systematic reviews are recommended to be reported following the PRISMA guideline (Page et al, 2021). -->
-<!-- All protocols for systematic reviews are recommended to be reported following the PRISMA-P guideline (Page et al, 2021). -->
-
-<!-- In particular when a retrospective study is conducted using hospital records, it is recommended that the RECORD extension of the STROBE guideline is considered (Benchimol et al, 2015). -->
+All clinical trials are recommended to be reported following the CONSORT guideline (Schulz K F, Altman D G, Moher D., 2010).
 
 # References
 
-- **SAR-2023-010-TK-v01** -- [title]
-<!-- - Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd Ed.). New York: Routledge. -->
+<!-- - **SAR-2023-010-TK-v01** -- Efficacy of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial -->
+- Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd Ed.). New York: Routledge.
 - Zarin DA, et al. The ClinicalTrials.gov results database -- update and key issues. N Engl J Med 2011;364:852-60 (<https://doi.org/10.1056/NEJMsa1012065>).
 - Gamble C, et al. Guidelines for the Content of Statistical Analysis Plans in Clinical Trials. JAMA. 2017;318(23):2337–2343 (<https://doi.org/10.1001/jama.2017.18556>).
-- von Elm E, Altman DG, Egger M, Pocock SJ, Gøtzsche PC, Vandenbroucke JP; STROBE Initiative. The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) Statement: guidelines for reporting observational studies. Int J Surg. 2014 Dec;12(12):1495-9 (<https://doi.org/10.1016/j.ijsu.2014.07.013>).
-<!-- - Benchimol EI, Smeeth L, Guttmann A, Harron K, Moher D, Petersen I, Sørensen HT, von Elm E, Langan SM; RECORD Working Committee. The REporting of studies Conducted using Observational Routinely-collected health Data (RECORD) statement. PLoS Med. 2015 Oct 6;12(10):e1001885 (<https://doi.org/10.1371/journal.pmed.1001885>). -->
-<!-- - Schulz K F, Altman D G, Moher D. CONSORT 2010 Statement: updated guidelines for reporting parallel group randomised trials BMJ 2010; 340 :c332 (<https://doi.org/10.1136/bmj.c332>). -->
-<!-- - Page M J, McKenzie J E, Bossuyt P M, Boutron I, Hoffmann T C, Mulrow C D et al. The PRISMA 2020 statement: an updated guideline for reporting systematic reviews BMJ 2021; 372 :n71 (<https://doi.org/10.1136/bmj.n71>). -->
-<!-- - Moher D, Shamseer L, Clarke M, Ghersi D, Liberati A, Petticrew M, Shekelle P, Stewart LA. Preferred Reporting Items for Systematic Review and Meta-Analysis Protocols (PRISMA-P) 2015 statement. Syst Rev. 2015;4(1):1 (<https://doi.org/10.1186/2046-4053-4-1>). -->
+- Schulz K F, Altman D G, Moher D. CONSORT 2010 Statement: updated guidelines for reporting parallel group randomised trials BMJ 2010; 340 :c332 (<https://doi.org/10.1136/bmj.c332>).
 
 # Appendix
 
