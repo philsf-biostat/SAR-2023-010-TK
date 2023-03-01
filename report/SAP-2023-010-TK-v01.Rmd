@@ -77,12 +77,13 @@ source("scripts/input.R", encoding = 'UTF-8')
 
 ## Objectives
 
+To evaluate the efficacy of using pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects.
+
 ## Hypotheses
 
-- The REC change from baseline is different in both biomaterials;
 - The CAL change from baseline is different in both biomaterials;
 - The PD change from baseline is different in both biomaterials;
-- The CAL change from baseline is different in both biomaterials;
+- The REC change from baseline is different in both biomaterials;
 - The TP change from baseline is different in both biomaterials.
 
 # Data
