@@ -155,9 +155,11 @@ Randomized controled clinical trial.
 
 ## Inclusion and exclusion criteria
 
+N/A
+
 ## Exposures
 
-pre-hydrated collagenated bone mix (Gel 40, Tecnoss, Turin, Italy) or bone graft
+Pre-hydrated collagenated xenogenic bone mix (0-Gel40) or bone graft (1-Gen-Os).
 
 ## Outcomes
 
