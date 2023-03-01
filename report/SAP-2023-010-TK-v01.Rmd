@@ -137,15 +137,15 @@ observations.
 CAL will be calculated as the sum of REC and DP.
 All outcomes will be calculated as the difference between the end-of-study measurements and baseline measurements.
 
-<!-- After the cleaning process -->
-<!-- `r Nvar_final` -->
-<!-- variables were included in the analysis -->
-<!-- with -->
-<!-- `r Nobs_final` -->
-<!-- observations. -->
 After the cleaning process
 `r Nvar_final`
-variables were included in the analysis.
+variables were included in the analysis
+with
+`r Nobs_final`
+observations.
+<!-- After the cleaning process -->
+<!-- `r Nvar_final` -->
+<!-- variables were included in the analysis. -->
 The total number of observations excluded due to incompleteness and exclusion criteria will be reported in the analysis.
 Table 1 shows the structure of the analytical dataset.
 
