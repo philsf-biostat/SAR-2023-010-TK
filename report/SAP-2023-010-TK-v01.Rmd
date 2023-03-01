@@ -178,13 +178,13 @@ Pre-hydrated collagenated xenogenic bone mix (0-Gel40) or bone graft (1-Gen-Os).
 
 **Primary outcome**
 
-REC
+CAL change.
 
 **Secondary outcomes**
 
-- CAL gain
-- PD
-- TP
+- REC change;
+- PD change;
+- TP change.
 
 ## Covariates
 
