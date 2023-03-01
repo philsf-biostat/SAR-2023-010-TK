@@ -210,15 +210,17 @@ The distributions of participants' characteristics will be summarized in tables 
 ### Inferential analyses
 
 All comparisons between groups will be performed as univariate analyses.
-Continuous variables will be compared between groups with the
+Outcomes will be compared between exposure groups with the
 independent t test with Welch correction.
 <!-- paired t test. -->
 <!-- Mann-Whitney test. -->
 <!-- signed rank Wilcoxon test. -->
-Differences in distribution of categorical variables will be assessed with the
-Fisher exact test.
+<!-- Differences in distribution of categorical variables will be assessed with the -->
+<!-- Fisher exact test. -->
 <!-- chi-square test. -->
 <!-- McNemar test. -->
+
+The Cohen's d standardized mean difference will be reported for all outcomes as the effect size for the efficacy of the main exposure relative to the gold standard.
 
 <!-- All inferential analyses will be performed in the statistical models (described in the next section). -->
 
