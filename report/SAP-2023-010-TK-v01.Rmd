@@ -186,7 +186,7 @@ No adjustment for covariates will be performed in this analysis.
 
 The epidemiological profile of the study participants will be described.
 Demographic
-(sex, age and BMI)
+<!-- (sex, age and BMI) -->
 and clinical variables
 <!-- ( [vars] ) -->
 will be described as
@@ -211,6 +211,8 @@ Fisher exact test.
 <!-- All inferential analyses will be performed in the statistical models (described in the next section). -->
 
 ### Statistical modeling
+
+N/A
 
 ### Missing data
 
