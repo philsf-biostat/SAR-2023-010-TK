@@ -1,5 +1,5 @@
 ---
-title: "Analytical Plan for Efficacy of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial"
+title: "Analytical Plan for Non-inferiority of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial"
 subtitle: 'DOCUMENT: SAP-2023-010-TK-v01'
 author: '**From:** Felipe Figueiredo **To:** Tom Kobe'
 date: "2023-03-01"
@@ -37,7 +37,7 @@ panderOptions('table.split.table', 160)
 
 \newpage
 
-**Analytical Plan for Efficacy of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial**
+**Analytical Plan for Non-inferiority of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial**
 
 **Document version**
 
@@ -77,14 +77,14 @@ source("scripts/input.R", encoding = 'UTF-8')
 
 ## Objectives
 
-To evaluate the efficacy of using pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects.
+To evaluate the non-inferiority of using pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects.
 
 ## Hypotheses
 
-- The CAL change from baseline is different in both biomaterials;
-- The PD change from baseline is different in both biomaterials;
-- The REC change from baseline is different in both biomaterials;
-- The TP change from baseline is different in both biomaterials.
+- The CAL change from baseline in Gel 40 is non-inferior to Gen-Os;
+- The PD change from baseline in Gel 40 is non-inferior to Gen-Os;
+- The REC change from baseline in Gel 40 is non-inferior to Gen-Os;
+- The TP change from baseline in Gel 40 is non-inferior to Gen-Os.
 
 # Data
 
@@ -214,17 +214,14 @@ The distributions of participants' characteristics will be summarized in tables 
 ### Inferential analyses
 
 All comparisons between groups will be performed as univariate analyses.
-Outcomes will be compared between exposure groups with the
-independent t test with Welch correction.
-<!-- paired t test. -->
-<!-- Mann-Whitney test. -->
-<!-- signed rank Wilcoxon test. -->
-<!-- Differences in distribution of categorical variables will be assessed with the -->
-<!-- Fisher exact test. -->
-<!-- chi-square test. -->
-<!-- McNemar test. -->
+The Cohen's d standardized mean difference and its CI will be calculated for all outcomes as the effect size for the efficacy of the main exposure relative to the gold standard.
 
-The Cohen's d standardized mean difference will be reported for all outcomes as the effect size for the efficacy of the main exposure relative to the gold standard.
+The non-inferiority of the test intervention will be determined by using the minimum standardized difference detectable by this study d (calculated in section 5.3), where the equivalence interval lies between -d and d.
+For each outcome non-inferiority will be proven if the CI lies entirely above the lower margin of the equivalence interval -d.
+
+The p-values from the
+independent t test with Welch correction,
+will be reported for information purposes.
 
 <!-- All inferential analyses will be performed in the statistical models (described in the next section). -->
 
@@ -281,7 +278,7 @@ This analysis will be performed using statistical software `R` version `r getRve
 **Small sample size**
 
 The total sample size of this study is only 20 participants.
-Cohen considered an effect size of d = 0.8 to be large, which means that this sample size is only able to detect very large clinical effects.
+Cohen considered an effect size of d = 0.8 to be large, which means that this sample size is only able to detect very large clinical effects at the 5% level of significance.
 
 **Recommended reporting guideline**
 
@@ -290,7 +287,7 @@ All clinical trials are recommended to be reported following the CONSORT guideli
 
 # References
 
-<!-- - **SAR-2023-010-TK-v01** -- Efficacy of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial -->
+- **SAR-2023-010-TK-v01** -- Non-inferiority of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial
 - Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd Ed.). New York: Routledge.
 - Zarin DA, et al. The ClinicalTrials.gov results database -- update and key issues. N Engl J Med 2011;364:852-60 (<https://doi.org/10.1056/NEJMsa1012065>).
 - Gamble C, et al. Guidelines for the Content of Statistical Analysis Plans in Clinical Trials. JAMA. 2017;318(23):2337–2343 (<https://doi.org/10.1001/jama.2017.18556>).
