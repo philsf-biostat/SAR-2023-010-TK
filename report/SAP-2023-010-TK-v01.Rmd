@@ -214,20 +214,14 @@ The distributions of participants' characteristics will be summarized in tables 
 ### Inferential analyses
 
 All comparisons between groups will be performed as univariate analyses.
-Outcomes will be compared between exposure groups with the
-independent t test with Welch correction.
-<!-- paired t test. -->
-<!-- Mann-Whitney test. -->
-<!-- signed rank Wilcoxon test. -->
-<!-- Differences in distribution of categorical variables will be assessed with the -->
-<!-- Fisher exact test. -->
-<!-- chi-square test. -->
-<!-- McNemar test. -->
-
-The Cohen's d standardized mean difference will be reported for all outcomes as the effect size for the efficacy of the main exposure relative to the gold standard.
+The Cohen's d standardized mean difference and its CI will be calculated for all outcomes as the effect size for the efficacy of the main exposure relative to the gold standard.
 
 The non-inferiority of the test intervention will be determined by using the minimum standardized difference detectable by this study d (calculated in section 5.3), where the equivalence interval lies between -d and d.
 For each outcome non-inferiority will be proven if the CI lies entirely above the lower margin of the equivalence interval -d.
+
+The p-values from the
+independent t test with Welch correction,
+will be reported for information purposes.
 
 <!-- All inferential analyses will be performed in the statistical models (described in the next section). -->
 
