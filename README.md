@@ -1,6 +1,6 @@
-# Efficacy of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial
+# Non-inferiority of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial
 
-To evaluate the efficacy of using pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects.
+To evaluate the non-inferiority of using pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects.
 
 Statistical Analysis for Tom Kobe (Slovenia, 2023)
 <!-- Technical Report for Tom Kobe (Slovenia, 2023) -->
