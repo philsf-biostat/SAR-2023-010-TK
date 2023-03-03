@@ -278,7 +278,7 @@ This analysis will be performed using statistical software `R` version `r getRve
 **Small sample size**
 
 The total sample size of this study is only 20 participants.
-Cohen considered an effect size of d = 0.8 to be large, which means that this sample size is only able to detect very large clinical effects.
+Cohen considered an effect size of d = 0.8 to be large, which means that this sample size is only able to detect very large clinical effects at the 5% level of significance.
 
 **Recommended reporting guideline**
 
