@@ -1,7 +1,7 @@
 ---
-title: "[title]"
+title: "Non-inferiority of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial"
 subtitle: 'DOCUMENT: SAR-2023-010-TK-v01'
-author: '**From:** Felipe Figueiredo **To:** ___'
+author: '**From:** Felipe Figueiredo **To:** Tom Kobe'
 date: "`r Sys.Date()`"
 output:
   html_document:
@@ -37,7 +37,7 @@ panderOptions('table.split.table', 160)
 
 \newpage
 
-**[title]**
+**Non-inferiority of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial**
 
 **Document version**
 
@@ -117,7 +117,7 @@ tab_inf %>%
 
 # References
 
-- **SAP-2023-010-TK-v01** -- Analytical Plan for [title]
+- **SAP-2023-010-TK-v01** -- Analytical Plan for Non-inferiority of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial
 
 # Appendix
 
