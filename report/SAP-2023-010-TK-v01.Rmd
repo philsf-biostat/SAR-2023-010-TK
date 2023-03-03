@@ -81,10 +81,10 @@ To evaluate the non-inferiority of using pre-hydrated collagenated xenogenic bon
 
 ## Hypotheses
 
-- The CAL change from baseline is different in both biomaterials;
-- The PD change from baseline is different in both biomaterials;
-- The REC change from baseline is different in both biomaterials;
-- The TP change from baseline is different in both biomaterials.
+- The CAL change from baseline in Gel 40 is non-inferior to Gen-Os;
+- The PD change from baseline in Gel 40 is non-inferior to Gen-Os;
+- The REC change from baseline in Gel 40 is non-inferior to Gen-Os;
+- The TP change from baseline in Gel 40 is non-inferior to Gen-Os.
 
 # Data
 
