@@ -48,7 +48,7 @@ data.raw <- data.raw %>%
     tooth = factor(tooth),
     exposure = factor(exposure, labels = c("Gel 40", "Gen-Os")),
     # set gold standard as the reference level
-    # exposure = relevel(exposure, "Gen-Os"),
+    exposure = relevel(exposure, "Gen-Os"),
     outcome = cal2 - cal0,
     rec = rec2 - rec0,
     pd = pd2 - pd0,
