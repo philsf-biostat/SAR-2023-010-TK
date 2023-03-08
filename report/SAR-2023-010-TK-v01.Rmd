@@ -86,6 +86,17 @@ This analysis was performed using statistical software `R` version `r getRversio
 
 # Results
 
+```{r}
+n <- analytical %>%
+  count(exposure) %>%
+  pull(n)
+n1 <- n[1]
+n2 <- n[2]
+total <- sum(n)
+d <- pwr::pwr.t.test(n = total/2, power = .8, sig.level = .05)$d %>%
+  format.float()
+```
+
 ## Study population and follow up
 
 In total, there were `r Nobs_final` participants included in the study, of which
@@ -129,6 +140,14 @@ The average (SD) change in CAL was
 This translates to a standardized mean difference of d = `r inline_text(tab_inf, variable = outcome, column = "estimate")`
 (95% CI: `r inline_text(tab_inf, variable = outcome, column = ci)`).
 
+The standardized effect of treatment in change in REC was
+d = `r inline_text(tab_inf, variable = rec, column = "estimate")`
+(95% CI: `r inline_text(tab_inf, variable = rec, column = ci)`),
+for PD it was d = `r inline_text(tab_inf, variable = pd, column = "estimate")`
+(95% CI: `r inline_text(tab_inf, variable = pd, column = ci)`) and
+d = `r inline_text(tab_inf, variable = tp, column = "estimate")`
+(95% CI: `r inline_text(tab_inf, variable = tp, column = ci)`) in TP (Table 2).
+
 ```{r tab_inf}
 tab_inf %>%
   as_kable(              # only for markdown
@@ -139,13 +158,8 @@ tab_inf %>%
   )
 ```
 
-The standardized effect of treatment in change in REC was
-d = `r inline_text(tab_inf, variable = rec, column = "estimate")`
-(95% CI: `r inline_text(tab_inf, variable = rec, column = ci)`),
-for PD it was d = `r inline_text(tab_inf, variable = pd, column = "estimate")`
-(95% CI: `r inline_text(tab_inf, variable = pd, column = ci)`) and
-d = `r inline_text(tab_inf, variable = tp, column = "estimate")`
-(95% CI: `r inline_text(tab_inf, variable = tp, column = ci)`) in TP (Table 2).
+The non-inferiority defined for this analysis was the lower range of the 95% CI being larger than d = `r d`.
+All outcomes meet this criteria, so the non-inferiority of Gel 40 is proven in this sample.
 
 # Observations and Limitations
 
