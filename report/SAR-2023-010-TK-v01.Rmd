@@ -93,7 +93,7 @@ In total, there were `r Nobs_final` participants included in the study, of which
 The average (SD) age of the study participant was
 `r inline_text(tab_desc, variable = age)` years.
 
-All baseline and end-of-study levels of the outcomes can be seen in Table 1.
+Overall baseline and end-of-study levels of the outcomes in the study sample can be seen in Table 1.
 
 ```{r tab_desc}
 tab_desc %>%
