@@ -101,7 +101,7 @@ tab_desc %>%
   # as_flex_table(       # only for DOCX
   # ) %>%
   # flextable::set_caption(
-    caption = "**Table 1** caption"
+    caption = "**Table 1** Epidemiological and clinical characteristics of study participants."
   )
 ```
 
