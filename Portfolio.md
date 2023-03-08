@@ -1,6 +1,6 @@
 ---
 title: 'Non-inferiority of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial'
-date: "2023-03-10"
+date: "2023-03-08"
 permalink: /portfolio/SAR-2023-010/
 redirect_from:
   - /portfolio/SAR-2023-010-TK/
