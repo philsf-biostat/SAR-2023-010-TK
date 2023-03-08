@@ -106,8 +106,9 @@ tab_desc %>%
 ```
 
 The distribution density of change in outcome levels can be seen in Figure 1.
-The average change in CAL was slightly higher in the Gel 40 group when compared to Gen-Os group, but its distribution appears to be bi-modal, although its shape seems more well-defined with less variability around the center.
-This bi-modality could be a result of the larger amount of participants in the lower range of REC change when compared to the Gen-Os group.
+The center of change in CAL was slightly higher in the Gel 40 group when compared to Gen-Os group, but the variability in the Gen-Os group is much larger, as seen in the width of its distribution, and with a heavy tail towards higher values.
+The distribution of CAL change in Gel 40 appears to be bi-modal, although its shape seems more well-defined with less variability around the center.
+This could be a result of the larger amount of participants in the lower range of REC change when compared to the Gen-Os group.
 
 ```{r fig1, fig.cap="**Figure 1** Density distribution of changes in study outcomes."}
 # ![Age](../figures/outcome.png)
