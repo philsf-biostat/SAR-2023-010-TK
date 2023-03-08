@@ -121,6 +121,13 @@ The distributions of TP in both groups appear similar in center, width and shape
 
 ## Inferential analysis
 
+The average (SD) change in CAL was
+`r inline_text(tab_inf, variable = outcome, column = "Gel 40")` mm in the Gel 40 group and
+`r inline_text(tab_inf, variable = outcome, column = "Gen-Os")` mm in the Gen Os group
+(`r inline_text(tab_inf, variable = outcome, column = p.value)`).
+This translates to a standardized mean difference of d = `r inline_text(tab_inf, variable = outcome, column = "estimate")`
+(95% CI: `r inline_text(tab_inf, variable = outcome, column = ci)`).
+
 ```{r tab_inf}
 tab_inf %>%
   as_kable(              # only for markdown
