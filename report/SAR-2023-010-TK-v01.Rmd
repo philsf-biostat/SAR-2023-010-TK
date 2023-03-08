@@ -88,6 +88,13 @@ This analysis was performed using statistical software `R` version `r getRversio
 
 ## Study population and follow up
 
+In total, there were `r Nobs_final` participants included in the study, of which
+`r inline_text(tab_desc, variable = gender, level = "Female")` were women (Table 1).
+The average (SD) age of the study participant was
+`r inline_text(tab_desc, variable = age)` years.
+
+All baseline and end-of-study levels of the outcomes can be seen in Table 1.
+
 ```{r tab_desc}
 tab_desc %>%
   as_kable(              # only for markdown
