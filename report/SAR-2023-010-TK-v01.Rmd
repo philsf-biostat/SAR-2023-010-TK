@@ -105,7 +105,15 @@ tab_desc %>%
   )
 ```
 
-```{r fig1, fig.cap="**Figure 1** caption"}
+The distribution density of change in outcome levels can be seen in Figure 1.
+The average change in CAL was slightly higher in the Gel 40 group when compared to Gen-Os group, but its distribution appears to be bi-modal.
+This could be explained by the larger amount of participants in the lower range of REC change when compared to the Gen-Os group.
+
+The PD change distribution appears slightly bi-modal in the Gel 40 group, and the average change was higher than the Gen-Os group.
+The REC change appear to have similar averages in both groups, but as mentioned above the Gel 40 group has a heavier tail at the lower range of data.
+The distributions of TP in both groups appear similar in center, width and shape.
+
+```{r fig1, fig.cap="**Figure 1** Density distribution of study outcomes."}
 # ![Age](../figures/outcome.png)
 knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
