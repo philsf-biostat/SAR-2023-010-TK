@@ -1,7 +1,7 @@
 ---
-title: "[title]"
+title: "Non-inferiority of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial"
 subtitle: 'DOCUMENT: SAR-2023-010-TK-v01'
-author: '**From:** Felipe Figueiredo **To:** ___'
+author: '**From:** Felipe Figueiredo **To:** Tom Kobe'
 date: "`r Sys.Date()`"
 output:
   html_document:
@@ -37,7 +37,7 @@ panderOptions('table.split.table', 160)
 
 \newpage
 
-**[title]**
+**Non-inferiority of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial**
 
 **Document version**
 
@@ -88,18 +88,36 @@ This analysis was performed using statistical software `R` version `r getRversio
 
 ## Study population and follow up
 
+In total, there were `r Nobs_final` participants included in the study, of which
+`r inline_text(tab_desc, variable = gender, level = "Female")` were women (Table 1).
+The average (SD) age of the study participant was
+`r inline_text(tab_desc, variable = age)` years.
+
+Overall baseline and end-of-study levels of the outcomes in the study sample can be seen in Table 1.
+
 ```{r tab_desc}
 tab_desc %>%
   as_kable(              # only for markdown
   # as_flex_table(       # only for DOCX
-    caption = "**Table 1** caption"
+  # ) %>%
+  # flextable::set_caption(
+    caption = "**Table 1** Epidemiological and clinical characteristics of study participants."
   )
 ```
 
-```{r fig1, fig.cap="**Figure 1** caption"}
+The distribution density of change in outcome levels can be seen in Figure 1.
+The center of change in CAL was slightly higher in the Gel 40 group when compared to Gen-Os group, but the variability in the Gen-Os group is much larger, as seen in the width of its distribution, and with a heavy tail towards higher values.
+The distribution of CAL change in Gel 40 appears to be bi-modal, although its shape seems more well-defined with less variability around the center.
+This could be a result of the larger amount of participants in the lower range of REC change when compared to the Gen-Os group.
+
+```{r fig1, fig.cap="**Figure 1** Density distribution of changes in study outcomes."}
 # ![Age](../figures/outcome.png)
-# knitr::include_graphics("../figures/outcome.png", error = FALSE)
+knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
+
+The PD change distribution appears slightly bi-modal in the Gel 40 group, and the average change was higher than the Gen-Os group, but this could be due to the small sample size (see Observations).
+The REC change appear to have similar averages in both groups, but as mentioned above the Gel 40 group has a heavier tail at the lower range of data.
+The distributions of TP in both groups appear similar in center, width and shape.
 
 ## Inferential analysis
 
@@ -107,6 +125,8 @@ tab_desc %>%
 tab_inf %>%
   as_kable(              # only for markdown
   # as_flex_table(       # only for DOCX
+  # ) %>%
+  # flextable::set_caption(
     caption = "**Table 2** caption"
   )
 ```
@@ -117,17 +137,15 @@ tab_inf %>%
 
 # References
 
-- **SAP-2023-010-TK-v01** -- Analytical Plan for [title]
+- **SAP-2023-010-TK-v01** -- Analytical Plan for Non-inferiority of pre-hydrated collagenated xenogenic bone mix in periodontal intrabony defects: clinical trial
 
 # Appendix
 
 ## Exploratory data analysis
 
-N/A
-
 ```{r A1, fig.cap="**Figure A1** Distribution of age in the study population."}
 # ![Age](../figures/distr_age.png)
-# knitr::include_graphics("../figures/distr_age.png", error = FALSE)
+knitr::include_graphics("../figures/distr_age.png", error = FALSE)
 ```
 
 ## Availability

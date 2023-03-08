@@ -13,10 +13,30 @@ gg <- analytical %>%
 # plots -------------------------------------------------------------------
 
 gg.outcome <- gg +
-  geom_density(aes(outcome, fill = exposure), alpha = .8) +
+  geom_density(
+    data = analytical %>%
+      select(exposure, age, gender, cal = outcome, rec, pd, tp,) %>%
+      pivot_longer(c(cal, rec, pd, tp)),
+    aes(value, fill = exposure), alpha = .8) +
   # geom_bar(aes(outcome, fill = exposure)) +
-  xlab(attr(analytical$outcome, "label")) +
-  ylab("")
+  facet_wrap(~name, scales = "free") +
+  labs(
+    # x = attr(analytical$outcome, "label"),
+    x = "",
+    y = "Distribution density",
+    fill = "",
+    caption = paste("N = ", Nobs_final),
+  )
+
+gg.age <- gg +
+  geom_density(aes(age, fill = gender), alpha = .8) +
+  labs(
+    x = attr(analytical$age, "label"),
+    # x = "",
+    y = "Distribution density",
+    fill = "",
+    caption = paste("N = ", Nobs_final),
+  )
 
 # cool facet trick from https://stackoverflow.com/questions/3695497 by JWilliman
 # gg +
