@@ -164,7 +164,7 @@ tab_inf %>%
   # as_flex_table(       # only for DOCX
   # ) %>%
   # flextable::set_caption(
-    caption = "**Table 2** caption"
+    caption = "**Table 2** Effect of the Gel 40 intervention in the average change of CAL, REC, PD and TP in mm."
   )
 ```
 
