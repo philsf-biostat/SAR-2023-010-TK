@@ -92,6 +92,8 @@ This analysis was performed using statistical software `R` version `r getRversio
 tab_desc %>%
   as_kable(              # only for markdown
   # as_flex_table(       # only for DOCX
+  # ) %>%
+  # flextable::set_caption(
     caption = "**Table 1** caption"
   )
 ```
@@ -107,6 +109,8 @@ knitr::include_graphics("../figures/outcome.png", error = FALSE)
 tab_inf %>%
   as_kable(              # only for markdown
   # as_flex_table(       # only for DOCX
+  # ) %>%
+  # flextable::set_caption(
     caption = "**Table 2** caption"
   )
 ```
