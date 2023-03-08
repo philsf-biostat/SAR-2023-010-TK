@@ -86,6 +86,17 @@ This analysis was performed using statistical software `R` version `r getRversio
 
 # Results
 
+```{r}
+n <- analytical %>%
+  count(exposure) %>%
+  pull(n)
+n1 <- n[1]
+n2 <- n[2]
+total <- sum(n)
+d <- pwr::pwr.t.test(n = total/2, power = .8, sig.level = .05)$d %>%
+  format.float()
+```
+
 ## Study population and follow up
 
 In total, there were `r Nobs_final` participants included in the study, of which
@@ -147,6 +158,8 @@ tab_inf %>%
   )
 ```
 
+The non-inferiority defined for this analysis was the lower range of the 95% CI being larger than d = `r d`.
+All outcomes meet this criteria, so the non-inferiority of Gel 40 is proven in this sample.
 
 # Observations and Limitations
 
