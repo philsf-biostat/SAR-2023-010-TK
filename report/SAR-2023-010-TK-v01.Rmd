@@ -121,6 +121,7 @@ The distributions of TP in both groups appear similar in center, width and shape
 
 ## Inferential analysis
 
+The difference in outcome changes for both interventions can be seen in Table 2.
 The average (SD) change in CAL was
 `r inline_text(tab_inf, variable = outcome, column = "Gel 40")` mm in the Gel 40 group and
 `r inline_text(tab_inf, variable = outcome, column = "Gen-Os")` mm in the Gen Os group
@@ -137,6 +138,14 @@ tab_inf %>%
     caption = "**Table 2** caption"
   )
 ```
+
+The standardized effect of treatment in change in REC was
+d = `r inline_text(tab_inf, variable = rec, column = "estimate")`
+(95% CI: `r inline_text(tab_inf, variable = rec, column = ci)`),
+for PD it was d = `r inline_text(tab_inf, variable = pd, column = "estimate")`
+(95% CI: `r inline_text(tab_inf, variable = pd, column = ci)`) and
+d = `r inline_text(tab_inf, variable = tp, column = "estimate")`
+(95% CI: `r inline_text(tab_inf, variable = tp, column = ci)`) in TP (Table 2).
 
 # Observations and Limitations
 
